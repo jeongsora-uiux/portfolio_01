@@ -135,6 +135,11 @@ header nav{
   color: #6a6a6a;
 }
 
+.video{
+  width: 100%;
+  
+}
+
 
 .marquee{
   height: 180px;
@@ -752,8 +757,6 @@ header nav{
   opacity: .5;
   margin: 0 10px;
 }
-.footer02_u3 ul li:nth-of-type(){}
-
 .footer02_u4{}
 .footer02_u4 ul{
   display: flex;
