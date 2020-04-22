@@ -117,7 +117,7 @@ $(function(){
     }
   }
  */
-  var $menu = $('.gnb');
+/*   var $menu = $('.gnb');
 
   $menu.children('li').each(function(){
     var $this = $(this);
@@ -133,6 +133,19 @@ $(function(){
       $this.find('.sGnbArea').stop(true,true).hide();
       $span.stop().animate({'width':$span.data('width')+'px'},300);
     });
+  }); */
+
+  $(document).ready(function(){
+    var barMenu = new BarMenu("gnbWrap");
+    barMenu.setSelectMenuItemAt(1, false);
+
+    // select 이벤트 리스너 등록
+    barMenu.$barMenu.on("select",function(e){
+      var oldIndex = -1;
+      if(e.$oldItem)
+        oldIndex = e.$oldItem.index();
+    });
+    barMenu.setSelectMenuItemAt(1, false);
   });
 
 

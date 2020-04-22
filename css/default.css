@@ -121,7 +121,9 @@ li.sGnb a:hover{
   
 }
  */
-  .gnbWrap{
+
+
+/*   .gnbWrap{
     display: block;
     height: 100px;
   }
@@ -154,7 +156,97 @@ li.sGnb a:hover{
   }
   li.sGnb a{
     line-height: 20px;
+  } */
+
+  .gnb ul,
+  .gnb ul li {
+    list-style: none;
   }
+  
+  .gnb ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .gnb ul li ul {
+    display: none;
+  }
+  
+  .gnb .sub {
+    display: none;
+  }
+  
+  .gnb .sub ul {
+    display: block;
+  }
+  
+  .gnbWrap {
+    font: normal 13px Arial, sans-serif;
+    line-height: 16px;
+  }
+  
+  .gnbWrap ul.gnb,
+  .gnbWrap ul.gnb,
+  .gnbWrap ul.gnb > li {
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  .gnbWrap{
+    width: 100%;
+    height: 100px;
+    background: skyblue;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 2vw;
+  }
+  
+  .gnbWrap > a{
+    display: inline-block;
+    float: left;
+    padding: 5px;
+  }
+  .gnb > li > a {
+    width: 70%;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    position: relative;
+  }
+  
+  .gnb > li {
+    float: left;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .gnb > li a {
+    float: left;
+    display: block;
+    color: #fff;
+    padding: 12px 38px 12px 25px;
+    text-shadow: 1px 1px 1px #000;
+    text-decoration: none;
+  }
+  .gnb > li > a{
+    padding: 0 38px 0 25px;
+  }
+  
+  .gnbWrap ul.gnb > li a:hover {
+    background-position: 100% -40px;
+    color: #000;
+    text-shadow: none;
+  }
+  .sGnbArea > ul{
+    width: 10vw;
+    background: #fff;
+  }
+
+
 
 
 /* 
