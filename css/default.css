@@ -68,7 +68,7 @@ header nav{
   height: 100px;
   position: relative;
 }
-.gnbWrap{
+/* .gnbWrap{
   width: 100%;
   height: 100%;
   position: absolute;
@@ -76,27 +76,16 @@ header nav{
   top: 0;
   margin: 0 auto;
   background: #fff;
-  /* overflow: hidden; */
+ 
 }
-/* .gnbWrap:after{
-  content: '';
-  display: block;
-  opacity: 50%;
-  width: 100%;
-  height: 100px;
-  background: #fff;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-} */
+
 .gnbWrap > a{
   display: inline-block;
   float: left;
   padding: 5px;
 }
 
-.gnbWrap > ul{
+ul.gnb{
   width: 70%;
   height: 100px;
   display: flex;
@@ -104,8 +93,74 @@ header nav{
   justify-content: space-around;
   align-items: center;
 }
-.gnbWrap > ul > li{
+ul.gnb > li{
+  position: relative;
+}
 
+ul.gnb > li > span{
+  height: 100px;
+  line-height: 100px;
+  cursor: default;
+}
+ul.gnb .sGnbArea{
+  position: absolute;
+  top: 100px;
+  width: 550px;
+  display: none;
+  opacity: 0.95;
+  left: 0px;
+}
+li.sGnb{
+
+}
+li.sGnb a{
+  font-size: 14px;
+  line-height: 2rem;
+}
+li.sGnb a:hover{
+  
+}
+ */
+  .gnbWrap{
+    display: block;
+    height: 100px;
+  }
+  .gnbWrap > a{
+    float: left;
+  }
+  ul.gnb{
+    float: left;
+  }
+  ul.gnb > li{
+    float: left;
+    position: relative;
+  }
+  ul.gnb > li > span{
+    float: left;
+    height: 100px;
+    line-height: 100px;
+    cursor: default;
+  }
+  ul.gnb .sGnbArea{
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 550px;
+    display: none;
+    opacity: 0.95;
+  }
+  li.sGnb{
+
+  }
+  li.sGnb a{
+    line-height: 20px;
+  }
+
+
+/* 
+
+.gnb_01.on{
+  color: red;
 }
 .gnbWrap > ul > li > a{
   color: #6a6a6a;
@@ -116,9 +171,12 @@ header nav{
   top: 100px;
   width:100%;
   height: 200px;
-  /* overflow: hidden; */
+  overflow: hidden;
+  z-index: 99;
   display: none;
+  background: #fff;
 }
+
 .sGnbArea ul{
   width: 100%;
   height: 150px;
@@ -128,15 +186,25 @@ header nav{
   align-items: center;
   background: #fff;
 }
+.sGnbArea ul:after {
+  content: "";
+  display: block;
+  clear: both;
+}
 .sGnbArea ul li{
   padding-right: 5rem;
 }
 .sGnbArea ul li a{
   color: #6a6a6a;
 }
+ */
+
+
+
 
 .video{
   width: 100%;
+  clear: both;
   
 }
 
