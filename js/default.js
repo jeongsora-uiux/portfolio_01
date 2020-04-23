@@ -52,88 +52,12 @@ $(function(){
   // ----------------------------------------------------------------
 
   //슬라이드 2depth
-/*   var menu = $('.gnb > li');
+  var menu = $('.gnb > li');
   var wrap = $('.gnbWrap');
   var menuHeight =  menu.children('.gnb').height();
   var pageURL = location.href;
   var activeMenu;
 
-  menu.on({
-    mouseover: function(i){
-      var tg = $(this);
-      menu.removeClass('on');
-      tg.addClass('on');
-      var th = menuHeight + tg.find('>.sGnbArea').eq(i).height();
-      wrap.stop().animate({
-        height: th
-      });
-    },
-    mouseout: function(){
-      var tg = $(this);
-      menu.removeClass('on');
-      wrap.stop().animate({
-        height: menuHeight
-      });
-      onActive(); 
-    }
-  });
-
-  menu.each(function(i){
-    var tg = $(this);
-    var sub = tg.find('>.sGnbArea > ul > li'); // li들 37개
-    console.log(sub);   
-    var menuURL = tg.children().attr('href');  //#
-    var active = pageURL.indexOf(menuURL);  //32
-    console.log(active); //32
-    if(active > -1){
-      activeMenu = tg;
-    }
-    sub.each(function(j){
-      var tg = $(this);
-      var subURL = tg.children().attr('href'); //#
-      active = pageURL.indexOf(subURL); //32
-      console.log(active);
-      if(active > -1){
-        activeMenu = tg;
-      }
-    });
-    sub.on({
-      mouseover: function(){
-        var tg = $(this);
-        sub.removeClass('on');
-        tg.addClass('on');
-      },
-      mouseout: function(){
-        var tg = $(this);
-        tg.removeClass('on');
-        onActive();
-      }
-    });
-  });
-  onActive();
-  function onActive(){
-    if(activeMenu){
-      activeMenu.trigger('mouseover');
-    }
-  }
- */
-/*   var $menu = $('.gnb');
-
-  $menu.children('li').each(function(){
-    var $this = $(this);
-    var $span = $this.children('span');
-    $span.data('width',$span.width());
-
-    $this.bind('mouseenter',function(){
-      $menu.find('.sGnbArea').stop(true,ture).hide();
-      $span.stop().animate({'width':'510px'},300,function(){
-        $this.find('.sGnbArea').slideDown(300);
-      });
-    }).bind('mouseleave',function(){
-      $this.find('.sGnbArea').stop(true,true).hide();
-      $span.stop().animate({'width':$span.data('width')+'px'},300);
-    });
-  }); */
 
   $(document).ready(function(){
     var barMenu = new BarMenu("gnbWrap");
@@ -147,12 +71,27 @@ $(function(){
     });
     barMenu.setSelectMenuItemAt(1, false);
   });
+ 
+  //////////////////////---------------------
 
+  
+  $('.gnb_01').on({
+    mouseenter:function(){
+      $(this).find('div').slideDown();
+    },
+    mouseleave:function(){
+      $(this).find('div').slideUp();
+    },
+    click:function(){
+      $('.gnb_01').removeClass('menu__item--current');
+      $('.gnb_01').find('a').removeClass('menu__item--current');
 
+      $(this).addClass('menu__item--current');
+      $(this).find('a').addClass('menu__item--current');
+    }
+  })
 
-
-
-
+  //////////////////////---------------------
 
 
   //무한 텍스트 전광판
