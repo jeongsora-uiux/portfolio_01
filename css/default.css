@@ -15,6 +15,8 @@ li{
   width: 100%;
   position: relative;
   z-index: 100;
+  background: rgba(225,225,225,0.4);
+
 }
 .slide-bnr{
   overflow: hidden;
@@ -48,6 +50,7 @@ li{
   width: 100%;
   /* background: #2702ad; */
   color: rgb(169, 186, 211);
+  color: #000;
   border-width: 0;
   background: transparent;
 
@@ -156,6 +159,7 @@ li.sGnb a:hover{
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0 2vw;
+  background: rgba(225,225,225,0.4);
 }
 
 .gnbWrap > a{
@@ -195,6 +199,7 @@ li.sGnb a:hover{
   background-position: 100%-40px;
   color: #000;
   text-shadow: none;
+  
   /* text-decoration: underline; */
 }
 
@@ -206,10 +211,10 @@ li.sGnb a:hover{
   display: none;
 }
 .sGnbArea > ul{
-  width: 12vw;
+  background: #0d4bba;
 }
 .sGnbArea > ul > li{
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -217,10 +222,13 @@ li.sGnb a:hover{
 *, *::after, *::before{
   box-sizing: border-box;
 }
-
+.gnb{
+  width: 70%;
+}
 .gnb_01 {
 	position: relative;
-	margin: 0 1em;
+  margin: 0 1em;
+  width:15%;
 }
 
 .gnb_01 > a {
@@ -301,18 +309,31 @@ li.sGnb a:hover{
 
 /* --------------------------------------------------- */
 
-.login{}
-.login p{}
-
-.fad:after{
-  content: '\f002';
-  font-family: Font Awesome\ 5 Brands;
+.login{
+  width: 5%;
+  height: 100%;
+  display: flex;
+   /* justify-content:middle; inline 요소할때만*/
+  align-items: center;
 }
-
-
-
-
-
+.login p{
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 6px;
+  margin-right: 14px;
+}
+.login a{
+  font-size: 20px;
+  color: #000;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.pinkstyle:before{
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
 
 
 .video{
@@ -397,6 +418,7 @@ li.sGnb a:hover{
   color: #000;
   font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 .icon{
   display: inline-block;
@@ -418,6 +440,7 @@ li.sGnb a:hover{
 .out_hotels ul{
   width: 200%;
   height: 100%;
+  position: absolute;
   display: flex;
   justify-content: space-around ;
 }
