@@ -23,10 +23,8 @@ $(function(){
   
 
   function rollingStart(){
-    var banner = $(".slide-bnr ul").outerWidth();
     var bannerWidth = $(".slide-bnr ul li").eq(0).outerWidth();
     var bannerHeight = $(".slide-bnr ul li").outerHeight();
-    var length = $(".slide-bnr ul li").length;
 
     $(".slide-bnr ul").css("width",bannerWidth + "px");
     $(".slide-bnr ul li").css("height",bannerHeight + "px");
@@ -79,40 +77,65 @@ $(function(){
   // -----------------------------------------------------
 
   //호텔찾기 슬라이드
-  var time; 
   var $carouselLi;
   var carouselCount; 
   var currentIndex; 
   var caInterval;
-  var imgW;    
+  var imgW;
+  
+
   $(document).ready(function(){
       carouselInit(2500, 5000);
   });
-  function carouselInit( height ){
+  carouselInit()
+  function carouselInit( ){
       $carousel = $(".slide_box");
       $carouselLi = $(".slide");
       carouselCount = $carouselLi.length; 
       currentIndex = 0; 
-      imgW=$carouselLi.width();
+      imgW = $carouselLi.width();
       carousel();
   }
-
+  
   function carousel(){
       caInterval = setInterval(function(){
-          var left = "-" + imgW;  //384  
-          $carousel.animate( {left: left * currentIndex},1000, function(){
-            $('.slide').first().appendTo("<li>" + $('.slide').find("li:first").html() + "</li>");
-            $('.slide').find("li:first").remove();
-            $('.slide').css("left","0px");
-            currentIndex++;
+          var leftarrow = "-" + imgW;  //384  
+          $carousel.animate({left: leftarrow * currentIndex},1500,function(){     
+            $('.slide_box').append("<li>" + $(this).find("li:first").html() + "</li>");
+            $('.slide_box').find("li:first").remove();
+            $('.slide_box').css({
+              left:0
+            });
           });
-      }, 1000);
+      },1000);
+      
   };
-
- 
-
-
+/* 
+  var current = 0;
+  var max = 0;
+  var container;
   
+  function init(){
+    container = jQuery('.slide_box');
+    max = container.children().length;
+
+    events();
+  }
+  
+  function prev(){
+
+  }
+  function next(){
+
+  }
+  function animate(){
+
+  }
+
+  jQuery(document).ready(init);
+  
+
+   */
 
 
 
