@@ -335,11 +335,14 @@ li.sGnb a:hover{
   cursor: pointer;
 }
 
-
+.video_box{
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+  height: 45vw;
+}
 .video{
   width: 100%;
-  clear: both;
-  
 }
 
 
@@ -832,6 +835,8 @@ li.sGnb a:hover{
   cursor: pointer;
   overflow: hidden;
   clear: both;
+  margin-top: 50px ;
+  margin-bottom: 0;
 }
 .more:after{
   content: '';
@@ -860,7 +865,97 @@ li.sGnb a:hover{
   bottom: 0px;
   z-index: -1;
 }
+
+.tourWrap{
+  width: 100%;
+  position: relative;
+  background: url(../images/img/tourWrapbg.jpg) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+.tourWrap:before{
+  content: '';
+  display: inline-block;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  height: 45vw;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.tourWrap h5{
+  padding-top:70px;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+.tourWrap p{
+  font-size: 1.5rem;
+  color: #b9b9b9;
+  text-align: center;
+}
+.tourList_box{
+  width: 80%;
+  margin: 0 auto;
+}
+.tourList_box .treeWrap{
+  width: 100%;
+}
+.treeWrap .bar{
+  text-align: center;
+  position: relative;
+}
+.treeWrap .bar:after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 50vw;
+  background-position: center;
+  width: 28px;
+  padding-bottom: 100px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -14px;
+  background: url(../_img/comn/bar_tail.png) no-repeat 50% bottom;
+}
+.bar .icon{}
+.bar .icon > img{}
+.bar .dot{}
+.bar .dot > img{}
+.bar strong{}
+.tourList{
+  position: relative;
+}
+.tourList_01{
+  position: absolute;
+}
+.tourList_01 > p{}
+.tourList_01 > p > img{}
+.tourList_01 > div{}
+.tourList_01 > div p{}
+.tourList_01 > div p:nth-of-type(1){}
+.tourList_01 > div p:nth-of-type(2){}
+.tourList_01 > div p:nth-of-type(3){}
+.tourList_01 > div span{}
+.tourList_01 > div span i{}
+.tourList_01 > div span i:after{}
+
+
+
+
+
+
+
+
+
+
+
 .footer01{
+  margin-top: 200px;
   height: 200px;
   width: 100%;
   padding: 0 10vw;
