@@ -77,69 +77,40 @@ $(function(){
   // -----------------------------------------------------
 
   //호텔찾기 슬라이드
+  var $carousel;
   var $carouselLi;
   var carouselCount; 
   var currentIndex; 
   var caInterval;
   var imgW;
-  
 
-  $(document).ready(function(){
-      carouselInit(2500, 5000);
-  });
   carouselInit()
+
   function carouselInit( ){
-      $carousel = $(".slide_box");
-      $carouselLi = $(".slide");
-      carouselCount = $carouselLi.length; 
-      currentIndex = 0; 
-      imgW = $carouselLi.width();
-      carousel();
+    $carousel = $(".slide_box");
+    $carouselLi = $(".slide");
+    carouselCount = $carouselLi.length; 
+    currentIndex = 0; 
+    carousel();
   }
   
   function carousel(){
-      caInterval = setInterval(function(){
-          var leftarrow = "-" + imgW;  //384  
-          $carousel.animate({left: leftarrow * currentIndex},1500,function(){     
-            $('.slide_box').append("<li>" + $(this).find("li:first").html() + "</li>");
-            $('.slide_box').find("li:first").remove();
-            $('.slide_box').css({
-              left:0
-            });
-          });
-      },1000);
-      
+    caInterval = setInterval(function(){
+      imgW = ($(".slide_box li").eq(0).position().left * 2) + $(".slide_box li").eq(0).width();
+      var leftarrow = "-" + imgW;  //384  
+      $carousel.animate({left: leftarrow},1500,function(){     
+        $('.slide_box').append("<li>" + $(this).find("li:first").html() + "</li>");
+        $('.slide_box').find("li:first").remove();
+        $('.slide_box').css({
+          left:0
+        });
+      });
+    },5000);
   };
-/* 
-  var current = 0;
-  var max = 0;
-  var container;
-  
-  function init(){
-    container = jQuery('.slide_box');
-    max = container.children().length;
-
-    events();
-  }
-  
-  function prev(){
-
-  }
-  function next(){
-
-  }
-  function animate(){
-
-  }
-
-  jQuery(document).ready(init);
-  
-
-   */
-
 
 
 
 
   //end
 });
+

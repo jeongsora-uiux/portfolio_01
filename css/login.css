@@ -1,0 +1,98 @@
+@import url('reset.css');
+
+*{
+  padding: 0;
+  margin: 0;
+}
+body{
+  
+}
+.Wrap{
+  text-align: center;
+  margin: 0 auto;
+  background: rgba(13,75,186,0.2);
+}
+.login{
+  padding-top: 100px;
+  overflow: hidden;
+  width: 30%;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+.login > a{
+  display: inline-block;
+  float: left;
+}
+.login > a > img{
+  width: 70%;
+}
+.login > h1{
+  float: left;
+  display: inline-block;
+  color: rgb(65,65,65);
+  margin: 20px 0 50px 30px;
+  font-size: 2.2rem;
+  margin-bottom: 50px;
+}
+.userinput_box{
+  clear: both;
+  padding-top: 10px;
+}
+.userinput_box input:nth-of-type(1){
+  width: 70%;
+  height: 48px;
+  text-indent: 14px;
+  font-size: 16px;
+  font-family: "Noto Sans", 돋움, Dotum, "Apple SD Gothic Neo", Helvetica, sans-serif;
+  /* background: transparent; */
+  border: 1px solid rgba(0,0,0,0.3);
+}
+.userinput_box input:nth-of-type(1)::placeholder{
+  color: rgba(32, 32, 32, 0.5);
+  font-weight: 700;
+}
+.userinput_box input:nth-of-type(2){}
+
+.login_pw{
+
+}
+.userinput_box{}
+.userinput_box input{}
+
+.login_check{
+  margin-top: 10px;
+  width: 100%;
+}
+.login_check p{
+  float: left;
+}
+.idCheckbox{
+}
+input[id="saveID"] +  label{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #bcbcbc;
+  cursor: pointer;
+}
+input[id="saveID"]:checked + label{
+  background: #0d4bba;
+}
+input[id="saveID"]{
+  display: none;
+}
+.idCheckbox p{
+  
+}
+.btnWrap{}
+.btnWrap > a{}
+.btnWrap > a > strong{}
+
+.opt_listWrap{}
+.opt_listWrap ul{}
+.opt_listWrap ul li{}
+.opt_listWrap ul li a{}
+
+.loginGuide{
+
+}

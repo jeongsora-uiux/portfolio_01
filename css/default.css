@@ -757,10 +757,13 @@ li.sGnb a:hover{
 
 }
 .p3{
+  margin-top: 5px;
   color: rgb(74, 74, 74);
+  vertical-align: middle;
 }
 .p3 img:nth-of-type(1){
   width: 70%;
+  vertical-align: middle;
 }
 .p3 i{
   display: inline-block;
@@ -782,6 +785,8 @@ li.sGnb a:hover{
 }
 .p3 i:nth-of-type(2) img{
   width: 100px;
+  margin: 0;
+  vertical-align: middle;
 }
 .p3 b{
   color: #cec9c4;
@@ -868,93 +873,231 @@ li.sGnb a:hover{
 
 .tourWrap{
   width: 100%;
+  height: 60vw;
   position: relative;
-  background: url(../images/img/tourWrapbg.jpg) ;
   background-repeat: no-repeat;
   background-size: cover;
-  z-index: -1;
-}
-.tourWrap:before{
-  content: '';
-  display: inline-block;
-  background: rgba(0,0,0,0.6);
-  width: 100%;
-  height: 45vw;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)), url(../images/img/tourWrapbg.jpg)  ;
+  cursor: pointer;
+  margin-top: 50px;
 }
 .tourWrap h5{
   padding-top:70px;
-  font-size: 3rem;
+  padding-bottom: 25px;
+  font-size: 4rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
+  margin: 0;
 }
-.tourWrap p{
-  font-size: 1.5rem;
+.tourWrap > p{
+  font-size: 1.7rem;
   color: #b9b9b9;
   text-align: center;
+  margin-bottom: 50px;
 }
 .tourList_box{
   width: 80%;
   margin: 0 auto;
+  height: calc(100% - 150px);
 }
 .tourList_box .treeWrap{
   width: 100%;
-}
-.treeWrap .bar{
-  text-align: center;
+  height: 100%;
   position: relative;
 }
-.treeWrap .bar:after{
-  content: '';
+.bar{
+  width: 40px;
+  height: 100%;
+  text-align: center;
   position: absolute;
-  width: 20px;
-  height: 50vw;
-  background-position: center;
-  width: 28px;
-  padding-bottom: 100px;
+  left: calc(50% - 20px);
   top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -14px;
-  background: url(../_img/comn/bar_tail.png) no-repeat 50% bottom;
 }
-.bar .icon{}
-.bar .icon > img{}
-.bar .dot{}
-.bar .dot > img{}
-.bar strong{}
+.bar .icon{
+  margin-left: 5px;
+}
+.icon > img{
+  width: 150%;
+}
+.dot_box{
+  position: relative;
+  width: 5px;
+  height: 500px;
+  background: rgba(223,70,77,0.4);
+  margin-left: 18px;
+}
+.dot_box:after{
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 500px;
+  width: 5px;
+  height: 300px;
+  background: url(../images/img/bar_tail.png) no-repeat center center;
+  background-size: cover;
+}
+.bar .dot{
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -4px;
+}
+.bar .dot:nth-of-type(1){
+  top: 50px;
+}
+.bar .dot:nth-of-type(2){
+  top: 150px;
+}
+.bar .dot:nth-of-type(3){
+  top: 330px;
+}
+.bar .dot:nth-of-type(4){
+  top: 430px;
+}
+.bar .dot:nth-of-type(5){
+  top: 610px;
+}
+.bar .dot > img{
+  width: 100%;
+}
+.arrow_white{
+  position: relative;
+}
+.arrow_white span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url(../images/img/arrow.png) no-repeat center center;
+  width: 30px;
+  height: 30px;
+}
+.arrow_white span:nth-of-type(1){
+  left: 15px;
+  top: 42px;
+  transform: rotate(-180deg);
+}
+.arrow_white span:nth-of-type(2){
+  left: -40px;
+  top: 140px;
+}
+.arrow_white span:nth-of-type(3){
+  left: 15px;
+  top: 322px;
+  transform: rotate(-180deg);
+}
+.arrow_white span:nth-of-type(4){
+  left: -40px;
+  top: 420px;
+}
+.arrow_white span:nth-of-type(5){
+  left: 15px;
+  top: 602px;
+  transform: rotate(-180deg);
+}
+.bar strong{
+  position: absolute;
+  left: -50px;
+  bottom: 126px;
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 1.8rem;
+  color: #df464d;
+  background: rgba(0,0,0,0.6);
+  border: 2px solid rgba(223,70,77,0.4);
+}
 .tourList{
   position: relative;
 }
 .tourList_01{
   position: absolute;
+  left:0;
+  top: 0;
+  width: 50%;
+  display: block;
+  background: #fff;
+  padding: 1.2vw;
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  margin-top: 30px ;
 }
-.tourList_01 > p{}
-.tourList_01 > p > img{}
-.tourList_01 > div{}
-.tourList_01 > div p{}
-.tourList_01 > div p:nth-of-type(1){}
-.tourList_01 > div p:nth-of-type(2){}
-.tourList_01 > div p:nth-of-type(3){}
-.tourList_01 > div span{}
-.tourList_01 > div span i{}
-.tourList_01 > div span i:after{}
+.tourList_01:nth-of-type(1){
+  left: calc(50% + 30px) ;
+  top: 0;
+}
+.tourList_01:nth-of-type(2){
+  left: -30px;
+  top: 100px;
+}
+.tourList_01:nth-of-type(3){
+  left: calc(50% + 30px) ;
+  top: 280px;
+}
+.tourList_01:nth-of-type(4){
+  left: -30px;
+  top: 380px;
+}
+.tourList_01:nth-of-type(5){
+  left: calc(50% + 30px) ;
+  top: 560px;
+}
 
+.tourList_01 > p{
+  float: left;
+  margin-left: 2.3vw;
+  width: 30%;
+  height: 125px;
+  display: inline-block;
+  overflow: hidden;
+}
+.tourList_01 > p > img{
+  width: 100%;
+}
+.tourList_02{
+  float: left;
+  width: 60%;
+  position: relative;
+}
 
-
-
-
-
-
-
-
+.tourList_02 p{
+  line-height: 1.7;
+}
+.tourList_02 p:nth-of-type(1){
+  color: #000;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.tourList_02 p:nth-of-type(2){
+  color: #606060;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.tourList_02 p:nth-of-type(3){
+  color: #606060;
+  font-weight: 400;
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+.tourList_02 span{
+  color: #606060;
+  font-weight: 700;
+  display: inline-block;
+  font-size: 1.3rem;
+  padding-top: 8px;
+}
+.tourList_02 span i{
+  font-style: normal;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-width: 0 0 0 2px;
+  padding-left: 5px;
+  margin-left: 5px;
+}
 
 
 .footer01{
+  clear: both;
   margin-top: 200px;
   height: 200px;
   width: 100%;
@@ -991,7 +1134,7 @@ li.sGnb a:hover{
 .footer01 div:nth-of-type(2) p{
   text-indent: 5px;
 }
-.footer01 div:nth-of-type(2) h5{
+.footer01 div:nth-of-type(2) h6{
   color: #939393;
   font-size: 3.5rem;
   font-weight: 700;

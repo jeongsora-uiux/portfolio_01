@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <link rel="stylesheet" href="css/login.css">
+  <link rel="shortcut icon" href="images/img/ico.ico">
+</head>
+<body>
+  <div class="Wrap">
+    <div class="login">
+      <a href="index.html"><img src="images/img/LOGO.png" alt="산토리니여행사이트입니다."></a>
+      <h1>회원가입 & 로그인</h1>
+      <div class="userinput_box">
+        <input type="text" name="member_id" placeholder="이메일 or 아이디">
+        <input type="hidden" name="redirect_url" value>
+      </div>
+      <div class="login_pw">
+        <div class="userinput_box">
+          <input type="password" name="member_pw" placeholder="비밀번호">
+        </div>
+      </div>
+      <div class="login_check">
+        <p>기존 회원은 아이디를 입력하세요</p>
+        <div class="idCheckbox">
+          <input type="checkbox" id="saveID">
+          <label for="saveID"></label>
+          로그인 상태 유지
+        </div>
+      </div>
+      <div class="btnWrap">
+        <a href="#" class="Button" id="login_btn">
+          <strong>로그인</strong>
+        </a>
+      </div>
+      <div class="opt_listWrap">
+        <ul>
+          <li><a href="#">비밀번호 찾기</a></li>
+          <li><a href="#">회원가입</a></li>
+        </ul>
+      </div>
+      <div class="loginGuide"></div>
+    </div>
+    <div class="SNSlogin">
+      <h2>SNS 로그인</h2>
+      <div class="facebook">
+        <a href="#">
+          <span></span>
+          <strong>페이스북으로 로그인</strong>
+        </a>
+      </div>
+      <div class="naver">
+        <a href="#">
+          <span></span>
+          <strong>네이버로 로그인</strong>
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer_logo">
+        <a href="#">
+          <img src="" alt="">
+        </a>
+      </div>
+      <ul>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#">개인정보취급방침</a></li>
+      </ul>
+      <p class="copyrights">
+        Copyrights <a href="#">Santorini trip</a> Corp. All Rights Reserved.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
